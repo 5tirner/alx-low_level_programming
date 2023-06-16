@@ -1,4 +1,4 @@
- #include <stdio.h>
+#include <stdio.h>
 
 /**
  * main - Entry point
@@ -11,14 +11,14 @@ int main(void)
 	int n;
 
 	n = 'a';
-	while(1)
+	while (1)
 	{
 		if (n == 'z' + 1)
 			n = 'A';
 		putchar(n);
 		if (n == 'Z')
 			break;
-		n++;	
+		n++;
 	}
 	putchar('\n');
 	return (0);
