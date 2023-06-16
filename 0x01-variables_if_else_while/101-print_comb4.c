@@ -16,7 +16,7 @@ int main(void)
 	while (n1 <= '7')
 	{
 		n2 = n1 + 1;
-		while(n2 <= '8')
+		while (n2 <= '8')
 		{
 			n3 = n2 + 1;
 			while (n3 <= '9')
