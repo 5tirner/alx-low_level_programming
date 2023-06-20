@@ -6,6 +6,10 @@
  * Return: no return value.
  */
 
+/**
+ * char *str - pointer to char, size 8 bytes
+ */
+
 void	print_putchar(char *str)
 {
 	int	i;
