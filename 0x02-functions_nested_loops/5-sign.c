@@ -4,7 +4,7 @@
  * print_sign - check the sign of n.
  * @n: integer that i want check it.
  *
- * Return: Returns 1 if n positive, Returns 0 if n = zero, Returns -1 otherwise.
+ * Return: Returns 1 if n positive, Returns 0 if zero and -1 otherwise.
  */
 
 int	print_sign(int n)
