@@ -75,9 +75,6 @@ void	case_smaller(int n)
 
 void	print_to_98(int n)
 {
-	int	i;
-
-	i = 0;
 	if (n > 98)
 		case_bigger(n);
 	else
