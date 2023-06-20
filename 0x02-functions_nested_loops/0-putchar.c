@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - check the code
+ * print_putchar - write char by char in a while loop until '\0'
  *
- * Return: Always 0.
+ * Return: no return value.
  */
 
 void	print_putchar(char *str)
@@ -17,6 +17,13 @@ void	print_putchar(char *str)
 		i++;
 	}
 }
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+
 int	main(void)
 {
 	print_putchar("_putchar\n");
