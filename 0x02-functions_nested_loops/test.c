@@ -1,7 +1,7 @@
 #include "main.h"
 
-int main()
+int main(void)
 {
-	print_alphabet_x10();
-	return (0);
+    jack_bauer();
+    return (0);
 }
