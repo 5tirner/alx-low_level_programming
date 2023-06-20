@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * jack_bauer - print all the 24 hours
+ *
+ * Return: no return value.
+ */
+
 void	jack_bauer(void)
 {
 	int	h;
