@@ -48,6 +48,13 @@ void	case_bigger(int n)
 	}
 }
 
+/**
+ * case_smaller - from n to 98
+ * @n: from it
+ *
+ * Return: no return value.
+ */
+
 void	case_smaller(int n)
 {
 	int	i;
