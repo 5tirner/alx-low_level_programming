@@ -55,7 +55,7 @@ void	print_times_table(int n)
 
 	i = -1;
 	if (n < 0 || n > 15)
-		return ;
+		return;
 	while (++i < n + 1)
 	{
 		j = -1;
