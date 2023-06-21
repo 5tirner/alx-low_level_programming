@@ -1,5 +1,5 @@
 #include "main.h"
-# define N 16
+
 /**
  * print_nbr - print any integer
  * @n: the integer that i want print it.
@@ -49,7 +49,6 @@ void	print_spaces(int n)
 
 void	print_times_table(int n)
 {
-	int	arr[n + 1][n + 1];
 	int	i;
 	int	j;
 	int	t;
@@ -63,11 +62,10 @@ void	print_times_table(int n)
 		t = 0;
 		while (++j < n + 1)
 		{
-			arr[i][j] = t;
-			t += i;
 			if (j != 0)
-				print_spaces(arr[i][j]);
-			print_nbr(arr[i][j]);
+				print_spaces(t);
+			print_nbr(t);
+			t += i;
 		}
 		_putchar('\n');
 	}
