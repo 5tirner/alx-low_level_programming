@@ -24,6 +24,6 @@ void	print_square(int size)
 		write(1, "\n", 1);
 		i++;
 	}
-	if (size == 0)
+	if (size <= 0)
 		write(1, "\n", 1);
 }
