@@ -1,4 +1,22 @@
-#include "main.h"
+#include <unistd.h>
+
+/**
+ * _putchar - print the char c
+ * @c: the char that i want print it
+ *
+ * Return: Nothing.
+ */
+
+void	_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+/**
+ * main - start of the code.
+ *
+ * Return: Always 0.
+ */
 
 int main()
 {
