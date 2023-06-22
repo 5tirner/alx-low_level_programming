@@ -11,5 +11,6 @@ void	print_most_numbers(void);
 void	more_numbers(void);
 void	_putchar(int c);
 void	print_line(int n);
+void	print_diagonal(int n);
 
 #endif
