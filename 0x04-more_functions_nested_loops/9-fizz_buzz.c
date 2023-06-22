@@ -7,7 +7,7 @@
  * Return: Nothing.
  */
 
-void	_putchar(char c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
@@ -32,8 +32,8 @@ int main()
 		if (i % 3 && i % 5)
 		{
 			if (i >= 10)
-				_putchar(i / 10 + 48);
-			_putchar(i % 10 + 48);
+				ft_putchar(i / 10 + 48);
+			ft_putchar(i % 10 + 48);
 		}
 		if (i == 100)
 			break;
