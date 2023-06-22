@@ -1,7 +1,7 @@
 #include <unistd.h>
 
 /**
- * _putchar - print the char c
+ * ft_putchar - print the char c
  * @c: the char that i want print it
  *
  * Return: Nothing.
@@ -36,7 +36,7 @@ int main()
 			ft_putchar(i % 10 + 48);
 		}
 		if (i == 100)
-			break;
+			break ;
 		write(1, " ", 1);
 		i++;
 	}
