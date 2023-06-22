@@ -23,8 +23,10 @@ int main()
 	int	i;
 
 	i = 1;
-	while (1)
+	while (i <= 100)
 	{
+		if (i != 1)
+			write(1, " ", 1);
 		if (i % 3 == 0)
 			write(1, "Fizz", 4);
 		if (i % 5 == 0)
@@ -35,9 +37,6 @@ int main()
 				ft_putchar(i / 10 + 48);
 			ft_putchar(i % 10 + 48);
 		}
-		if (i == 100)
-			break ;
-		write(1, " ", 1);
 		i++;
 	}
 	write(1, "\n", 1);
