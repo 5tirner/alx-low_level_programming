@@ -18,10 +18,10 @@ int main(void)
 	save = 0;
 	while (1)
 	{
-		if (nb == 1)
-			break ;
 		if (max < save)
 			max = save;
+		if (nb == 1)
+			break ;
 		save2 = 1;
 		while (++save2 <= nb)
 		{
