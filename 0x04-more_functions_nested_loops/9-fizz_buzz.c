@@ -1,8 +1,8 @@
-#include <unistd.h>
+#include <main.h>
 
 /**
- * ft_putchar - print the char c
- * @c: the char that i want print it
+ * ft_putchar - print char
+ * @c: char that i want print it
  *
  * Return: Nothing.
  */
@@ -18,13 +18,15 @@ void	ft_putchar(char c)
  * Return: Always 0.
  */
 
-int main()
+int main(void)
 {
 	int	i;
 
 	i = 1;
 	while (i <= 100)
 	{
+		if (i != 1)
+			write(1, " ", 1);
 		if (i % 3 == 0)
 			write(1, "Fizz", 4);
 		if (i % 5 == 0)
