@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+/**
+ * main - get the factor of a number
+ *
+ * Return: Always 0.
+ */
+
 int main(void)
 {
 	long	nb;
