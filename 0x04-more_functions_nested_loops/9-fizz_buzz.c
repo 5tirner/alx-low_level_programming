@@ -1,4 +1,4 @@
-#include <main.h>
+#include <unistd.h>
 
 /**
  * ft_putchar - print char
