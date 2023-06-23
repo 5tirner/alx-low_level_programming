@@ -21,7 +21,7 @@ int main(void)
 		if (max < save)
 			max = save;
 		if (nb == 1)
-			break ;
+			break;
 		save2 = 1;
 		while (++save2 <= nb)
 		{
