@@ -16,8 +16,10 @@ int main(void)
 	nb = 612852475143;
 	max = 0;
 	save = 0;
-	while (nb != 1)
+	while (1)
 	{
+		if (nb == 1)
+			break ;
 		if (max < save)
 			max = save;
 		save2 = 1;
