@@ -29,7 +29,7 @@ void	puts_half(char *s)
 
 	i = len(s) - 1;
 	i /= 2;
-	if (i % 2)
+	if (i % 2 == 0)
 		i++;
 	while (s[i])
 	{
