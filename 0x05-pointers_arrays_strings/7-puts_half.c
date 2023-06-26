@@ -28,8 +28,6 @@ void	puts_half(char *s)
 	int	i;
 
 	i = len(s) - 1;
-	if (i % 2)
-		i--;
 	i /= 2;
 	while (s[i])
 	{
