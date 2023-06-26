@@ -3,7 +3,7 @@
 /**
  * puts2 - print the evens
  * @s: to print it's even index
- * 
+ *
  * Return: nothing
  */
 
