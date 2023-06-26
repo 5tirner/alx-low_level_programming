@@ -14,7 +14,7 @@ void	_puts(char *s)
 	i = 0;
 	while (s[i])
 	{
-		write(1, s[i], 1);
+		write(1, &s[i], 1);
 		i++;
 	}
 	write(1, "\n", 1);
