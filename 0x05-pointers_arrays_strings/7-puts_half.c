@@ -1,6 +1,22 @@
 #include "main.h"
 
 /**
+ * len - count len
+ * @s: is s
+ *
+ * Return: len
+ */
+int	len(char *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
+
+/**
  * puts_half - print half of s
  * @s: pointer to char
  *
@@ -11,7 +27,7 @@ void	puts_half(char *s)
 {
 	int	i;
 
-	i = _strlen(s) - 1;
+	i = len(s) - 1;
 	if (i % 2)
 		i--;
 	i /= 2;
