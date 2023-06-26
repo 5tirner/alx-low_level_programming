@@ -18,4 +18,5 @@ void	puts2(char *s)
 			write(1, &s[i], 1);
 		i++;
 	}
+	write(1, "\n", 1);
 }
