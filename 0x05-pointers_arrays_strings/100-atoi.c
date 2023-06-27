@@ -12,6 +12,7 @@ int	_atoi(char *s)
 	unsigned int	res;
 	int		sign;
 	int		i;
+	int		res2;
 
 	i = 0;
 	res = 0;
@@ -29,5 +30,6 @@ int	_atoi(char *s)
 		res = res * 10 + s[i] - 48;
 		i++;
 	}
-	return ((int)res * sign);
+	res2 = res * sign;
+	return (res2);
 }
