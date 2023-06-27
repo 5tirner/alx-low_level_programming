@@ -9,9 +9,9 @@
 
 int	_atoi(char *s)
 {
-	int	res;
-	int	sign;
-	int	i;
+	unsigned int	res;
+	int		sign;
+	int		i;
 
 	i = 0;
 	res = 0;
@@ -29,5 +29,5 @@ int	_atoi(char *s)
 		res = res * 10 + s[i] - 48;
 		i++;
 	}
-	return (res * sign);
+	return ((int)res * sign);
 }
