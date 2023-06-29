@@ -36,6 +36,13 @@ char	*cap_string(char *s)
 	i = 0;
 	while (s[i])
 	{
+		if (s[i] >= 'A' && s[i] <= 'Z')
+			s[i] += 32;
+		i++;
+	}
+	i = 0;
+	while (s[i])
+	{
 		while (s[i] && op(" \n\t,;.!?\"(){}", s[i]))
 			i++;
 		if (s[i])
