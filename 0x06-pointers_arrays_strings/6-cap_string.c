@@ -43,12 +43,12 @@ char	*cap_string(char *s)
 	i = 0;
 	while (s[i])
 	{
-		while (s[i] && op(" ,;.!?(){}", s[i]))
+		while (s[i] && op(" ,;.!?(){}\n\t\"", s[i]))
 			i++;
 		if (s[i])
 		{
 			j = 0;
-			while (s[i] && !op(" ,;.!?(){}", s[i]))
+			while (s[i] && !op(" ,;.!?(){}\n\t\"", s[i]))
 			{
 				if (j == 0 && s[i] >= 'a' && s[i] <= 'z')
 				{
@@ -60,12 +60,4 @@ char	*cap_string(char *s)
 		}
 	}
 	return (s);
-}
-
-#include <stdio.h>
-int main()
-{
-	char str[] = "Expect the best. Prepare for the worst. Capitalize on what comes.nhello world! hello-world 0123456hello worldthello world.hello worldn";
-	char *ptr = cap_string(str);
-	printf("%s\n%s\n", ptr, str);
 }
