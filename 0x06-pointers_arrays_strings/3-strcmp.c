@@ -5,7 +5,7 @@
  * s1: first one
  * s2: second
  *
- * Rteurn: difference between the two
+ * Return: difference between the two
  */
 
 int	_strcmp(char *s1, char *s2)
