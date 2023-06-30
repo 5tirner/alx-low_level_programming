@@ -24,3 +24,10 @@ char	*rot13(char *s)
 	 }
 	return (s);
 }
+
+int main()
+{
+	char str[] = "nopqrstuvwxyz";
+	printf("%s\n", rot13(str));
+}
+
