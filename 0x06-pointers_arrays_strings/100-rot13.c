@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * rot_13 - +13 or =13
+ * rot13 - +13 or =13
  * @s: string
  *
  * Return: pointer to char
  */
 
-char	*rot_13(char *s)
+char	*rot13(char *s)
 {
 	int	i;
 
