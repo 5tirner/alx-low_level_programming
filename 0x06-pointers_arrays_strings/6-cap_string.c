@@ -21,6 +21,7 @@ int	op(char *str, char c)
 	}
 	return (0);
 }
+
 /**
  * cap_string - cpitalize
  * @s: string
@@ -31,10 +32,9 @@ int	op(char *str, char c)
 char	*cap_string(char *s)
 {
 	int	i;
-	int	j;
 
 	i = 0;
-	while (s[i])
+	while (s[++i])
 	{
 		if (s[i] >= 'A' && s[i] <= 'Z')
 			s[i] += 32;
@@ -52,16 +52,10 @@ char	*cap_string(char *s)
 			i++;
 		if (s[i])
 		{
-			j = 0;
+			if (s[i] >= 'a' && s[i] <= 'z')
+				s[i] -= 32;
 			while (s[i] && !op(" ,;.!?(){}\n\t\"", s[i]))
-			{
-				if (j == 0 && s[i] >= 'a' && s[i] <= 'z')
-				{
-					s[i] -= 32;
-					j++;
-				}
 				i++;
-			}
 		}
 	}
 	return (s);
