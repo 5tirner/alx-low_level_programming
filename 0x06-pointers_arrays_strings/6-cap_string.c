@@ -33,12 +33,11 @@ char	*cap_string(char *s)
 {
 	int	i;
 
-	i = 0;
+	i = -1;
 	while (s[++i])
 	{
 		if (s[i] >= 'A' && s[i] <= 'Z')
 			s[i] += 32;
-		i++;
 	}
 	i = 0;
 	if (s[i] && s[i] >= 'a' && s[i] <= 'z')
