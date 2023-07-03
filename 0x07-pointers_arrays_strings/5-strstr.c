@@ -5,7 +5,7 @@
  * @haystack: string1
  * @needle: string2
  *
- * Return: pointer to char or 0
+ * Return pointer to char or 0
  */
 
 char	*_strstr(char *haystack, char *needle)
