@@ -1,8 +1,10 @@
 #include "main.h"
 
 /**
- * _memset - set b in s
+ * _memset - set b in s until n
+ * @s: string
  * @b: char to set it
+ * @n: unsigned int
  *
  * Return: s
  */
