@@ -5,7 +5,7 @@
  * @haystack: string1
  * @needle: string2
  *
- * Return pointer to char or 0
+ * Return: pointer to char or 0
  */
 
 char	*_strstr(char *haystack, char *needle)
@@ -15,7 +15,7 @@ char	*_strstr(char *haystack, char *needle)
 
 	i = 0;
 	if (!needle || !needle[0])
-		return (0);
+		return (haystack);
 	while (haystack[i])
 	{
 		j = 0;
