@@ -36,36 +36,36 @@ void	pnbr(long n)
 }
 
 /**
- * first - first sum
- * @arr: a
- * @size: s
+ * fill - fill 2D array
+ * @arr: arr
+ * @size: size
  *
- * Return: nothing
+ * Return: pointer of poiter to int
  */
 
-void	first(int *a, int s, int *d, int *b, long *c)
+int	**fill(int *arr, int size)
 {
-	long	t1;
+	int	**matrix;
 	int	i;
 	int	j;
+	int	k;
 
-	t1 = 0;
 	i = 0;
-	j = 0;
-	while (i < s * s)
+	k = 0;
+	matrix = (int **)malloc(sizeof(int *) * size);
+	while (i < size)
 	{
-		if (j == 0)
-			t1 += (long)a[i];
-		if (j == s)
-			j = -1;
-		j++;
+		j = 0;
+		matrix[i] = malloc(sizeof(int) * size);
+		while (j < size)
+		{
+			matrix[i][j] = arr[k];
+			j++;
+			k++;
+		}
 		i++;
 	}
-	pnbr(t1);
-	write(1, ", ", 2);
-	*d = -1;
-	*b = 0;
-	*c = 0;
+	return (matrix);
 }
 
 /**
@@ -78,29 +78,28 @@ void	first(int *a, int s, int *d, int *b, long *c)
 
 void	print_diagsums(int *a, int size)
 {
-	int	arr[size][size];
-	long	t1;
+	int	**arr;
 	int	i;
 	int	j;
-	int	k;
+	long	total1;
+	long	total2;
 
-	first(a, size, &i, &k, &t1);
+	i = -1;
+	j = 0;
+	total1 = 0;
+	total2 = 0;
+	arr = fill(a, size);
 	while (++i < size)
 	{
-		j = -1;
-		while (++j < size)
-		{
-			arr[i][j] = a[k];
-			k++;
-		}
+		total1 += (long)arr[i][j];
+		j++;
 	}
 	i = -1;
 	j = size - 1;
 	while (++i < size)
 	{
-		t1 += (long)arr[i][j];
+		total2 += (long)arr[i][j];
 		j--;
 	}
-	pnbr(t1);
-	write(1, "\n", 1);
+	printf("%ld, %ld\n", total1, total2);
 }
