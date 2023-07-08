@@ -14,23 +14,24 @@ int main(int ac, char **av)
 	int	t;
 	int	j;
 	
-	i = 1;
+	i = 0;
 	t = 0;
-	while (i < ac)
+	while (++i < ac)
 	{
 		j = 0;
 		while (av[i][j])
 		{
-			if (av[i][j] < '0'
-				|| av[i][j] > '9')
+			if (j == 0 && av[i][j] == '+')
+				j++;
+			else if ((av[i][j] < '0' || av[i][j] > '9'))
 			{
 				printf("Error\n");
 				return (1);
 			}
-			j++;
+			else
+				j++;
 		}
 		t += atoi(av[i]);
-		i++;
 	}
 	printf("%d\n", t);
 	return (0);
