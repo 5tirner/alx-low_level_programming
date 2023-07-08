@@ -19,11 +19,11 @@ int main(int ac, char **av)
 	while (++i < ac)
 	{
 		j = 0;
+		if (av[i][j] && av[i][j] == '+')
+			j = 1;
 		while (av[i][j])
 		{
-			if (j == 0 && av[i][j] == '+')
-				j++;
-			else if ((av[i][j] < '0' || av[i][j] > '9'))
+			if (av[i][j] < '0' || av[i][j] > '9')
 			{
 				printf("Error\n");
 				return (1);
