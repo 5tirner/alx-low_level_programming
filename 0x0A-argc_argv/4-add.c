@@ -21,7 +21,8 @@ int main(int ac, char **av)
 		j = 0;
 		while (av[i][j])
 		{
-			if (av[i][j] < '0' || av[i][j] > '9')
+			if (av[i][j] < '0'
+				|| av[i][j] > '9')
 			{
 				printf("Error\n");
 				return (1);
