@@ -45,7 +45,7 @@ void	print_nbr(int n)
 
 int main(int ac, char **av)
 {
-	av = NULL;
+	(void) av;
 	print_nbr(ac - 1);
 	_putchar('\n');
 	return (0);
