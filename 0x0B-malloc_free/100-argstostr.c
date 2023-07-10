@@ -22,7 +22,6 @@ int	s_size(int ac, char **av)
 		while (av[i][j])
 			j++;
 		t += j;
-		printf("%d\n", j);
 		i++;
 	}
 	return (t);
