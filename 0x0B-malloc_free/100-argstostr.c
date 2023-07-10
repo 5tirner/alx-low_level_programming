@@ -15,7 +15,7 @@ int	s_size(int ac, char **av)
 	int	j;
 
 	t = 0;
-	i = 1;
+	i = 0;
 	while (i < ac)
 	{
 		j = 0;
@@ -46,7 +46,7 @@ char	*argstostr(int ac, char **av)
 	s = malloc(t + ac);
 	if (!s)
 		return (NULL);
-	i = 0;
+	i = -1;
 	t = 0;
 	while (++i < ac)
 	{
