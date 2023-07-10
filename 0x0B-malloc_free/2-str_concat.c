@@ -33,14 +33,14 @@ char	*join(char *s, char *s1, char *s2)
 
 	i = 0;
 	j = 0;
-	while (s1[i])
+	while (s1 && s1[i])
 	{
 		s[j] = s1[i];
 		i++;
 		j++;
 	}
 	i = 0;
-	while (s2[i])
+	while (s2 && s2[i])
 	{
 		s[j] = s2[i];
 		i++;
@@ -65,10 +65,11 @@ char	*str_concat(char *s1, char *s2)
 	if (!s1 && !s2)
 		return (NULL);
 	if (!s1)
-		return (s2);
+		s = malloc(len(s2) + 1);
 	if (!s2)
-		return (s1);
-	s = malloc(len(s1) + len(s2) + 1);
+		s = malloc(len(s1) + 1);
+	if (s1 && s2)
+		s = malloc(len(s1) + len(s2) + 1);
 	if (!s)
 		return (NULL);
 	s = join(s, s1, s2);
