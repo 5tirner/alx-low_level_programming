@@ -58,7 +58,7 @@ char	**toalloc(char *str)
 
 	if (!str || !*str)
 		return (NULL);
-	s = (char **) malloc(sizeof(char *) * c_w(str) + 1);
+	s = (char **) malloc(sizeof(char *) * (c_w(str) + 1));
 	if (!s)
 		return (NULL);
 	return (s);
@@ -106,7 +106,7 @@ char	**strtow(char *str)
 		if (str[k])
 		{
 			s[i] = malloc(len(&str[k]) + 1);
-			if (!s[i])
+			if (!s[i] || !len(&str[k]))
 				return (do_free(s, i));
 			j = 0;
 			while (str[k] && str[k] != ' ')
