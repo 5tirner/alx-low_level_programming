@@ -63,7 +63,11 @@ char	*str_concat(char *s1, char *s2)
 	char	*s;
 
 	if (!s1 && !s2)
-		return (NULL);
+	{
+		s = malloc(1);
+		s[0] = '\0';
+		return (s);
+	}
 	if (!s1)
 		s = malloc(len(s2) + 1);
 	if (!s2)
