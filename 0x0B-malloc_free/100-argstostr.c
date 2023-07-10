@@ -42,20 +42,20 @@ char	*argstostr(int ac, char **av)
 	int	j;
 	int	t;
 
-	t = s_size(ac, av);
-	s = malloc(t + ac);
+	if (ac == 0 || !av)
+		return (NULL);
+	s = malloc(s_size(ac, av) + ac + 1);
 	if (!s)
 		return (NULL);
 	i = -1;
 	t = 0;
 	while (++i < ac)
 	{
-		j = 0;
-		while (av[i][j])
+		j = -1;
+		while (av[i][++j])
 		{
 			s[t] = av[i][j];
 			t++;
-			j++;
 		}
 		s[t] = '\n';
 		t++;
