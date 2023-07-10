@@ -13,11 +13,12 @@ char	*create_array(unsigned int size, char c)
 	char		*str;
 	unsigned int	i;
 
-	if (size == 0)
-		size = 1;
 	str = malloc(size + 1);
-	if (!str)
+	if (!str || size == 0)
+	{
+		write(1, "failed to allocate memory\n", 26);
 		return (NULL);
+	}
 	i = 0;
 	while (i < size)
 	{
