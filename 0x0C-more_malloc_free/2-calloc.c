@@ -19,6 +19,8 @@ void	*_calloc(unsigned int nmemb, unsigned int size)
 	if (nmemb > SIZE_MAX / size)
 		return (NULL);
 	address = malloc(nmemb * size);
+	if (!address)
+		return (NULL);
 	s = (char *)address;
 	i = 0;
 	while (i < nmemb * size)
