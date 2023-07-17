@@ -43,7 +43,7 @@ dog_t	*new_dog(char *name, float age, char *owner)
 	char	*na;
 	char	*ow;
 
-	new = malloc(sizeof(dog_t));
+	new = malloc(sizeof(struct dog));
 	if (!new)
 		return (NULL);
 	na = dup_str(name);
