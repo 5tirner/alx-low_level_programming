@@ -50,6 +50,10 @@ dog_t	*new_dog(char *name, float age, char *owner)
 	ow = dup_str(owner);
 	if (!na || !ow)
 	{
+		if (na)
+			free(na);
+		if (ow)
+			free(ow);
 		free(new);
 		return (NULL);
 	}
