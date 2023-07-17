@@ -5,6 +5,14 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+/**
+ * struct dog - define a dog
+ * @name: dog name
+ * @age: dog age
+ * @owner: dog owner
+ *
+ */
+
 typedef	struct	dog
 {
 	char	*name;
