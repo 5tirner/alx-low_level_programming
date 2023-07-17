@@ -1,7 +1,7 @@
 #include "dog.h"
 
 /**
- * init_dogs - initialize valeus in struct elements
+ * init_dog - initialize valeus in struct elements
  * @d: struct
  * @name: string
  * @age: float
