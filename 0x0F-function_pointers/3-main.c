@@ -2,35 +2,6 @@
 #include "function_pointers.h"
 
 /**
- * check_op - check the operator
- * @op: av[2]
- *
- * Return: 0 or 2 if the operator is valid, 1 otw
- */
-
-int	check_op(char *op)
-{
-	int	i;
-	char	c;
-
-	i = 0;
-	while (op[i] && op[i] == ' ')
-		i++;
-	if (op[i] != '%' && op[i] != '/' && op[i] != '-'
-		&& op[i] != '+' && op[i] != '*')
-		return (1);
-	c = op[i];
-	i++;
-	while (op[i] && op[i] == ' ')
-		i++;
-	if (op[i])
-		return (1);
-	if (c == '%' || c == '/')
-		return (2);
-	return (0);
-}
-
-/**
  * main - start
  * @ac: number of args
  * @av: content of args
@@ -45,12 +16,13 @@ int main(int ac, char **av)
 		printf("Error\n");
 		return (98);
 	}
-	if (check_op(av[2]) == 1)
+	if (av[2][1] != '\0')
 	{
 		printf("Error\n");
 		return (99);
 	}
-	if (atoi(av[3]) == 0 && check_op(av[2]) == 2)
+	if ((av[2][0] == '/' || av[2][0] == '%')
+		&& (atoi(av[3]) == 0))
 	{
 		printf("Error\n");
 		return (100);
