@@ -22,7 +22,7 @@ int main(int ac, char **av)
 		return (99);
 	}
 	if ((av[2][0] == '/' || av[2][0] == '%')
-		&& (atoi(av[3]) == 0))
+		&& atoi(av[3]) == 0)
 	{
 		printf("Error\n");
 		return (100);
