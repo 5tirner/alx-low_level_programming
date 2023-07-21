@@ -16,7 +16,9 @@ int main(int ac, char **av)
 		printf("Error\n");
 		return (98);
 	}
-	if (av[2][1] != '\0')
+	if ((av[2][1] != '\0') || (av[2][0] != '/'
+		&& av[2][0] != '%' && av[2][0] != '+'
+		&& av[2][0] != '*' && av[2][0] != '-'))
 	{
 		printf("Error\n");
 		return (99);
