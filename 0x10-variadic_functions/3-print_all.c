@@ -38,7 +38,7 @@ void	print_all(const char *format, ...)
 		if (i != 0 && r == 1)
 			printf(", ");
 		r = 0;
-		switch(format[i])
+		switch (format[i])
 		{
 			case 's':
 				r = 1;
