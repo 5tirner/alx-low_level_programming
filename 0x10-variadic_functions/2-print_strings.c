@@ -2,7 +2,7 @@
 
 /*
  * print_strings - print the all strings
- * @separator: sparing strts
+ * @separator: separing strts
  * @n: number of the strings
  *
  * Return: nothing

@@ -2,7 +2,7 @@
 
 /**
  * print_numbers - print all parameters
- * @separator - string to separing the params
+ * @separator: string to separing the params
  * @n: number of params
  *
  * Return: NoThings
