@@ -18,7 +18,7 @@ list_t	*add_node(list_t **head, const char *str)
 		return (NULL);
 	if (!str)
 	{
-		ptr->str = "(nil)";
+		ptr->str = NULL;
 		ptr->len = 0;
 	}
 	else
