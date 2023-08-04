@@ -15,6 +15,13 @@ void	print_binary(unsigned long int n)
 
 	max = ULLONG_MAX;
 	r = 0;
+	if (n == ULLONG_MAX)
+	{
+		i = -1;
+		while (++i < 64)
+			write(1, "1", 1);
+		return;
+	}
 	while (max != 0)
 	{
 		i = max;
