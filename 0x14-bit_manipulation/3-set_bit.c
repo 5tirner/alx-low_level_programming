@@ -3,7 +3,7 @@
 /**
  * set_bit - set val in bit by index
  * @n: the number
- * @inedx: the index
+ * @index: the index
  *
  * Return: 1 if it worked, or -1 if an error occurred
  */
