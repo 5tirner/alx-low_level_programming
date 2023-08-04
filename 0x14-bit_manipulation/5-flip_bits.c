@@ -15,7 +15,7 @@ unsigned int	flip_bits(unsigned long int n, unsigned long int m)
 
 	checker = n ^ m;
 	bitstoflip = 0;
-	while (checker >= 0)
+	while (checker > 0)
 	{
 		bitstoflip += (checker & 1);
 		checker >>= 1;
