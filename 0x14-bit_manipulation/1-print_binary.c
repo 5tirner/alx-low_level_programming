@@ -13,8 +13,6 @@ void	print_binary(unsigned long int n)
 	unsigned long int	i;
 	int			r;
 
-	if (n == 0)
-		write(1, "0", 1);
 	max = ULLONG_MAX;
 	r = 0;
 	while (max != 0)
