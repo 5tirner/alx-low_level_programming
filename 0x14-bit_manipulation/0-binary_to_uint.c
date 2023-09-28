@@ -2,7 +2,7 @@
 
 /**
  * binary_to_uint - convert from binary to unsigned int
- * @b: Binary NUmber.
+ * @b: Binary Number.
  *
  * Return: the number or NULL if SMTW.
  */
