@@ -10,10 +10,17 @@
 void	print_binary(unsigned long n)
 {
 	unsigned long	base;
-	int		r;
+	int				r;
 
-	base = 4294967296;
+	base = 4611686018427387904;
 	r = 0;
+	if (n > 9223372036854775807)
+	{
+		r = 1;
+		write(1, "1", 1);
+		n -= 9223372036854775807;
+		n -= 1;
+	}
 	while (base)
 	{
 		if (n >= base)
