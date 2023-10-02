@@ -32,9 +32,10 @@ int	errors(int rv, char **av, int fd_val)
 
 int	main(int ac, char **av)
 {
-	int	fd1, fd2;
+	int	fd1, fd2, w_read;
+	char	*str;
 
-	if (ac != 3)
+	if (ac != 3 || !av[1] || !av[2])
 		return (errors(97, av, 0));
 	fd1 = open(av[1], O_RDONLY);
 	if (fd1 == -1)
@@ -44,4 +45,22 @@ int	main(int ac, char **av)
 		fd2 = open(av[2], O_CREAT | O_RDWR, 0777);
 	if (fd2 == -1)
 		return (errors(99, av, 0));
+	str = malloc(1025);
+	w_read = read(fd1, str, 1024);
+	while (1)
+	{
+		if (w_read == -1)
+			return (-1);
+		str[w_read + 1] = 0;
+		if (dprintf(fd2, "%s", str) < 0)
+			return (-1);
+		if (w_read == 0)
+			break;
+		w_read = read(fd1, str, 1024);
+	}
+	if (close(fd1) == -1)
+		return (errors(100, av, fd1));
+	if (close(fd2) == -1)
+		return (errors(100, av, fd2));
+	return (0);
 }
