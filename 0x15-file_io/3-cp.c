@@ -40,12 +40,14 @@ int	main(int ac, char **av)
 	fd1 = open(av[1], O_RDONLY);
 	if (fd1 == -1)
 		return (errors(98, av, 0));
-	fd2 = open(av[2], O_TRUNC);
+	fd2 = open(av[2], O_RDWR | O_TRUNC);
 	if (fd2 == -1)
 		fd2 = open(av[2], O_CREAT | O_RDWR, 0777);
 	if (fd2 == -1)
 		return (errors(99, av, 0));
 	str = malloc(1025);
+	if (!str)
+		return (-1);
 	w_read = read(fd1, str, 1024);
 	while (1)
 	{
@@ -62,5 +64,6 @@ int	main(int ac, char **av)
 		return (errors(100, av, fd1));
 	if (close(fd2) == -1)
 		return (errors(100, av, fd2));
+	free(str);
 	return (0);
 }
