@@ -58,7 +58,7 @@ int	main(int ac, char **av)
 			return (-1);
 		str[w_read + 1] = 0;
 		if (dprintf(fd2, "%s", str) < 0)
-			return (-1);
+			return (errors(99, av, 0));
 		if (w_read == 0)
 			break;
 		w_read = read(fd1, str, 1024);
