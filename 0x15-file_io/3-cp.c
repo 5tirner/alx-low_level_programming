@@ -1,4 +1,6 @@
 #include "main.h"
+#include <sys/stat.h>
+#include <sys/types.h>
 
 /**
  * errors - generate the errors
@@ -34,6 +36,7 @@ int	main(int ac, char **av)
 {
 	int	fd1, fd2, w_read;
 	char	*str;
+	mode_t	f = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 
 	if (ac != 3 || !av[1] || !av[2])
 		return (errors(97, av, 0));
@@ -42,7 +45,7 @@ int	main(int ac, char **av)
 		return (errors(98, av, 0));
 	fd2 = open(av[2], O_RDWR | O_TRUNC);
 	if (fd2 == -1)
-		fd2 = open(av[2], O_CREAT | O_RDWR, 0777);
+		fd2 = open(av[2], O_CREAT | O_RDWR, f);
 	if (fd2 == -1)
 		return (errors(99, av, 0));
 	str = malloc(1025);
